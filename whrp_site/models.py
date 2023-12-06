@@ -40,3 +40,11 @@ class SkillsModel(models.Model):
 
     def __str__(self):
         return self.name
+    
+class AbilitiesModel(models.Model):
+    name = models.CharField(max_length=30)
+    description = models.TextField(max_length=1000)
+    characteristic = models.ForeignKey(CharacteristicsModel)
+
+    def __str__(self):
+        return self.name
